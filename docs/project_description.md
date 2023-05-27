@@ -46,8 +46,7 @@ The project requires Python 3.7+ and the following Python libraries:
 
 - numpy
 - pandas
-- matplotlib
-- seaborn
+- ydata-profiling
 - sklearn
 - joblib
 
