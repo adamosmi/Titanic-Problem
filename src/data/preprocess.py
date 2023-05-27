@@ -47,7 +47,7 @@ def save_data(df, path):
 
 def main():
     # Load the data
-    df = load_data('../../data/raw/train.csv')
+    df = load_data('data/raw/train.csv')
 
     # Preprocess the data
     df = fill_missing_values(df)
@@ -55,7 +55,7 @@ def main():
     df = encode_categorical_features(df)
 
     # Save the processed data
-    save_data(df, '../../data/processed/train_processed.csv')
+    save_data(df, 'data/processed/train_processed.csv')
 
 if __name__ == '__main__':
     main()
