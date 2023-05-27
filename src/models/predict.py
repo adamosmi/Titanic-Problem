@@ -21,10 +21,10 @@ def make_predictions(clf, data):
 
 def main():
     # Load the data
-    df = load_data('../../data/processed/test_processed.csv')
+    df = load_data('data/processed/test_processed.csv')
 
     # Load the trained model
-    clf = load_model('../../models/random_forest.pkl')
+    clf = load_model('models/random_forest.pkl')
 
     # Make predictions
     predictions = make_predictions(clf, df)
@@ -36,7 +36,7 @@ def main():
     })
 
     # Save the predictions to a CSV file
-    submission_df.to_csv('../../data/submission.csv', index=False)
+    submission_df.to_csv('data/submission.csv', index=False)
 
 if __name__ == '__main__':
     main()
