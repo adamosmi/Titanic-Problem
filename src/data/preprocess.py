@@ -46,16 +46,20 @@ def save_data(df, path):
     df.to_csv(path, index=False)
 
 def main():
-    # Load the data
-    df = load_data('data/raw/train.csv')
+    # Datasets
+    datasets = ['train', 'test']
 
-    # Preprocess the data
-    df = fill_missing_values(df)
-    df = transform_features(df)
-    df = encode_categorical_features(df)
+    for dataset in datasets:
+        # Load the data
+        df = load_data(f'data/raw/{dataset}.csv')
 
-    # Save the processed data
-    save_data(df, 'data/processed/train_processed.csv')
+        # Preprocess the data
+        df = fill_missing_values(df)
+        df = transform_features(df)
+        df = encode_categorical_features(df)
+
+        # Save the processed data
+        save_data(df, f'data/processed/{dataset}_processed.csv')
 
 if __name__ == '__main__':
     main()
